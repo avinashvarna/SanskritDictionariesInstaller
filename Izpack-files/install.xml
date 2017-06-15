@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<installation version="5.0"
+                     xmlns:izpack="http://izpack.org/schema/installation"
+                     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                     xsi:schemaLocation="http://izpack.org/schema/installation http://izpack.org/schema/5.0/izpack-installation-5.0.xsd">
+	<!--The info section. The meaning of the tags should be natural ...-->
+	<info>
+		<appname>Sanskrit Dictionaries</appname>
+		<appversion>1.0.0</appversion>
+		<authors>
+         <author name="Sanskrit Programmers" email="sanskrit-programmers@googlegroups.com" />
+         <author name="Avinash Varna" email="avinash.varna@gmail.com"/>
+		</authors>
+      <url>
+         https://sites.google.com/site/sanskritcode/dictionaries
+      </url>
+	</info>
+	<!--The gui preferences indication.-->
+	<guiprefs width="800" height="600" resizable="no">
+	   <laf name="substance">
+         <os family="windows" />
+         <param name="variant" value="mist-silver" />
+      </laf>	
+		<modifier key="langDisplayType" value="native"/>
+		<modifier key="allXGap" value="0"/>
+		<modifier key="allYGap" value="0"/>
+		<modifier key="labelGap" value="2"/>
+		<modifier key="useButtonIcons" value="yes"/>
+		<modifier key="useHeadingPanel" value="yes"/>
+		<modifier key="useHeadingForSummary" value="yes"/>
+		<modifier key="headingLineCount" value="1"/>
+		<modifier key="headingFontSize" value="1.5"/>
+		<modifier key="headingBackgroundColor" value="0x00ffffff"/>
+		<modifier key="headingPanelCounter" value="text"/>
+	</guiprefs>
+	<locale>
+		<langpack iso3="eng"/>
+	</locale>
+	<!--The Variables section.-->
+   <variables>
+      <variable name="TargetPanel.dir.windows" value="$USER_HOME\Sanskrit Dictionaries"/>
+   </variables>
+	<!--The panels section. We indicate here which panels we want to use. The order will be respected.-->
+	<panels>
+		<panel classname="HelloPanel"/>
+		<panel classname="InfoPanel">
+         <configuration>
+            <param name="console-text-paging" value="true" />
+            <param name="console-text-wordwrap" value="true" />
+         </configuration>
+      </panel>
+		<panel classname="LicencePanel">
+         <configuration>
+            <param name="console-text-paging" value="true" />
+            <param name="console-text-wordwrap" value="true" />
+         </configuration>
+      </panel>
+		<panel classname="TargetPanel"/>
+		<panel classname="SummaryPanel"/>
+		<panel classname="InstallPanel"/>
+      <panel classname="ShortcutPanel"/> 
+		<panel classname="SimpleFinishPanel"/>
+	</panels>
+	<!--The resources section. The ids must be these ones if you want to use the LicencePanel and/or the InfoPanel.-->
+   <resources>
+      <res id="InfoPanel.info" src="readme.txt" parse="yes"/>
+      <res id="LicencePanel.licence" src="MIT_licence.txt" parse="yes"/>
+      <res id="shortcutSpec.xml" src="shortcutSpec.xml"/>
+   </resources>
+	<!--The Natives section. We specify here our dll files and libraries.-->
+   <natives>
+      <native type="izpack" name="ShellLink.dll"/>
+      <native type="izpack" name="ShellLink_x64.dll"/>
+   </natives>
+	<!--The Conditions section. We declare conditions used by packs.-->
+	<conditions/>
+	<!--The packs section. We specify here our packs.-->
+	<packs>
+		<pack name="All_Dictionaries" required="yes" preselected="yes" hidden="false" os="windows">
+			<description>All Sanskrit Dictionaries Released By Sanskrit Programmers</description>
+			<file src="all_dicts_stardict_sanskrit.tar.gz" targetdir="$INSTALL_PATH/GoldenDict/content" override="true" unpack="true"/>
+		</pack>
+		<pack name="Sanskrit_Dictionaries" required="yes" preselected="yes" hidden="false" os="windows">
+			<description>GoldenDict Portable Version</description>
+			<file src="GoldenDict.zip" targetdir="$INSTALL_PATH/" override="true" unpack="true"/>
+		</pack>
+	</packs>
+</installation>

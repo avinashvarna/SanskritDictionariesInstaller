@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<izpack:shortcuts version="5.0"
+                  xmlns:izpack="http://izpack.org/schema/shortcuts"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://izpack.org/schema/shortcuts http://izpack.org/schema/5.0/izpack-shortcuts-5.0.xsd">
+   <defaultCurrentUser/>
+   <programGroup defaultName="$APP_NAME" location="startMenu"/>
+   <shortcut name="Sanskrit Dictionaries" target="$INSTALL_PATH/GoldenDict/GoldenDict.exe" commandLine="" workingDirectory="$INSTALL_PATH/" description="Launch Sanskrit Dictionaries" initialState="normal" programGroup="yes" desktop="yes" applications="no" startMenu="no" startup="no">
+	</shortcut>
+</izpack:shortcuts>
