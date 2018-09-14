@@ -1,7 +1,7 @@
 # SanskritDictionariesInstaller
 Generates Simple Installer for Sanskrit Dictionaries created by Sanskrit Programmers group
 
-The goal of this project is to provide a simple installer for the [stardict Sanskrit dictionaries](https://github.com/sanskrit-coders/stardict-sanskrit) created by the [Sanskrit Programmers group](https://sites.google.com/site/sanskritcode/home) using [Goldendict](http://www.goldendict.org) as the dictionary program. [Izpack](http://izpack.org) is used to generate the installer based on the provided configuration files.
+The goal of this project is to provide a simple installer for the [stardict Sanskrit dictionaries](https://github.com/sanskrit-coders/stardict-sanskrit) created by the Sanskrit Programmers group using [Goldendict](http://www.goldendict.org) as the dictionary program. [Izpack](http://izpack.org) is used to generate the installer based on the provided configuration files.
 
 In this initial version, the installer includes all the [released dictionaries](https://archive.org/download/stardict_collections/all_dicts_stardict_sanskrit.tar.gz) from the stardict-sanskrit project. However, the install.xml file can be easily modified to create custom installers.
 
