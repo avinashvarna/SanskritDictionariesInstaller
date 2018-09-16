@@ -2,7 +2,7 @@ Namaste,
 
 This program installs GoldenDict (www.goldendict.org) and all the Sanskrit 
 dictionaries compiled by the sanskrit programmers group
-https://sites.google.com/site/sanskritcode/dictionaries). 
+https://sanskrit-coders.github.io/site/pages/dictionaries/offline.html).
 
 This program is just a simple wrapper to make installing these various dictionaries 
 easier on the windows platform. After installation, please look for the program 
